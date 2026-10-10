@@ -28,38 +28,32 @@
 
 访问 [麦当劳 MCP 平台](https://open.mcd.cn/mcp)，登录后在「控制台」激活并复制 MCP Token。
 
-> [麦当劳 MCP Server GitHub 使用指南](https://github.com/M-China/mcd-mcp-server)
+> 参见[麦当劳 MCP Server GitHub 使用指南](https://github.com/M-China/mcd-mcp-server)
 
-### 2. 配置连接器
+### 2. 配置 MCP 连接
 
-在 WorkBuddy 左侧边栏「专家 · 技能 · 连接器」→「连接器」→ 右上角「自定义连接器」→「配置 MCP」，填入：
+在 WorkBuddy 左侧边栏【专家·技能·连接器】→【连接器】→ 右上角【自定义连接器】→【配置 MCP】中，
+填入 [`mcp-config.example.json`](mcp-config.example.json) 的内容，
+并把 `${MCD_MCP_TOKEN}` 替换为你的真实 MCP Token，保存后【启用】。
 
-```json
-{
-  "mcpServers": {
-    "mcd-mcp": {
-      "type": "streamablehttp",
-      "url": "https://mcp.mcd.cn",
-      "headers": {
-        "Authorization": "Bearer YOUR_MCP_TOKEN"
-      }
-    }
-  }
-}
+### 3. 安装本 Skill
+
+把 `skills/mc-use-it-or-lose-it/` 整个目录复制到 WorkBuddy 的用户技能目录：
+
+```bash
+cp -r skills/mc-use-it-or-lose-it ~/.workbuddy/skills/
 ```
 
-> 记得把 `YOUR_MCP_TOKEN` 换成实际 Token。脱敏示例见 [`mcp-config.example.json`](./mcp-config.example.json)。
+（Windows 为 `%USERPROFILE%\.workbuddy\skills\`）
 
-### 3. 载入 Skill
-
-把本目录放入 WorkBuddy 技能目录（`~/.workbuddy/skills/`），或直接在对话中引用本项目的 `SKILL.md`。
+装好后在对话框里直接说「我这个月有多少积分要过期」即可触发。
 
 ## 使用示例
 
 直接说需求即可，不需要记命令：
 
 ```
-我这个月有多少积分要过期？
+我这个月有多少积分要过期
 帮我把快过期的积分花掉
 积分抽奖现在有什么奖品
 积分能兑换什么
