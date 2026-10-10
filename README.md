@@ -91,19 +91,21 @@ cp -r skills/mc-use-it-or-lose-it ~/.workbuddy/skills/
 
 ```
 mc-use-it-or-lose-it/
-├── SKILL.md                      # Skill 定义：工作流、决策规则、安全边界
 ├── README.md                     # 本文件
 ├── MCP_INTEGRATION.md            # MCP 工具调用说明与业务价值
 ├── CONTEST_DECLARATION.md        # 参赛声明（官方原文，未改动）
 ├── mcp-config.example.json       # 脱敏配置示例
 ├── workbuddy.md                  # WorkBuddy 开发对话上下文
 ├── LICENSE                       # MIT
-├── references/
-│   └── decision-rules.md         # 决策规则详解
-├── scripts/
-│   └── points_planner.py         # 止损方案计算（纯标准库，无依赖）
-└── examples/
-    └── sample-input.json         # 真实接口数据样例
+└── skills/
+    └── mc-use-it-or-lose-it/     # Skill 本体（安装时复制此目录）
+        ├── SKILL.md              # Skill 定义：工作流、决策规则、安全边界
+        ├── references/
+        │   └── decision-rules.md # 决策规则详解
+        ├── scripts/
+        │   └── points_planner.py # 止损方案计算（纯标准库，无依赖）
+        └── examples/
+            └── sample-input.json # 真实接口数据样例
 ```
 
 ## 计算脚本
@@ -112,10 +114,12 @@ mc-use-it-or-lose-it/
 
 ```bash
 # 可读文本输出
-python3 scripts/points_planner.py --input examples/sample-input.json
+python3 skills/mc-use-it-or-lose-it/scripts/points_planner.py \
+  --input skills/mc-use-it-or-lose-it/examples/sample-input.json
 
 # 机器可读
-python3 scripts/points_planner.py --input examples/sample-input.json --format json
+python3 skills/mc-use-it-or-lose-it/scripts/points_planner.py \
+  --input skills/mc-use-it-or-lose-it/examples/sample-input.json --format json
 ```
 
 脚本只做计算，**不发起任何网络请求、不执行任何消耗动作**。
@@ -128,16 +132,10 @@ python3 scripts/points_planner.py --input examples/sample-input.json --format js
 - 只推荐**能覆盖过期积分的最小消耗**，不推荐更贵的商品
 - 已过期积分明确标注为**既成损失**，不假装能挽回
 
-## 关于名字
-
-**Use It or Lose It** 是英文里描述「权益过期作废」的固定说法——用了就是你的，不用就归零。麦当劳积分「到期未用即自动失效扣除、不累计到次月」的规则，正是这句话的字面写照。
-
-中文名「**麦麦积分末班车**」取的是同一意象的另一个角度：末班车开走之前必须上车。区别在于——错过末班车还有下一趟，错过积分清零就再也没有了。
-
 ## 免责声明
 
-本项目为麦当劳程序员节创意开发大赛参赛作品，由参赛者独立开发，**非麦当劳官方产品**。积分余额、商品信息、活动规则均以麦当劳官方渠道实时返回为准。「麦当劳」「麦当劳」等商标归其各自权利人所有，本项目与麦当劳无隶属或背书关系。
+本项目为麦当劳程序员节创意开发大赛参赛作品，由参赛者独立开发，非麦当劳官方产品。积分余额、商品信息、活动规则均以麦当劳官方渠道实时返回为准。
 
 ## 许可证
 
-[MIT License](./LICENSE) © 2026 lukailun
+[MIT License](./LICENSE)
