@@ -85,15 +85,13 @@ cp -r skills/mc-use-it-or-lose-it ~/.workbuddy/skills/
   - 接口返回的 7 个商品已过兑换截止时间（status 仍显示上架），已自动剔除。
 ```
 
-注意最后一行——**7 个商品被自动剔除**。这不是小事，是接口 `status` 字段滞后导致的真实陷阱，也是本工具和"直接照着原始列表念"的本质区别。
-
 ## 项目结构
 
 ```
 mc-use-it-or-lose-it/
 ├── README.md                     # 本文件
 ├── MCP_INTEGRATION.md            # MCP 工具调用说明与业务价值
-├── CONTEST_DECLARATION.md        # 参赛声明（官方原文，未改动）
+├── CONTEST_DECLARATION.md        # 参赛声明
 ├── mcp-config.example.json       # 脱敏配置示例
 ├── workbuddy.md                  # WorkBuddy 开发对话上下文
 ├── LICENSE                       # MIT
@@ -103,7 +101,7 @@ mc-use-it-or-lose-it/
         ├── references/
         │   └── decision-rules.md # 决策规则详解
         ├── scripts/
-        │   └── points_planner.py # 止损方案计算（纯标准库，无依赖）
+        │   └── points_planner.py # 方案计算
         └── examples/
             └── sample-input.json # 真实接口数据样例
 ```
