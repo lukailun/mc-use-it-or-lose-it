@@ -22,15 +22,15 @@
 | `query-my-account` | 积分账户核心数据 | `availablePoint`、`currentMouthExpirePoint`、`nextMouthExpirePoint`、`expiredPoint`、`lastMouthExpirePoint`、`frozenPoint` |
 | `query-lottery-info` | 当期抽奖活动、单次消耗、奖品池 | `activityName`、`activityStatusText`、`endTime`、`drawTypeText`、`drawDecision`、`prizes[]` |
 | `mall-points-products` | 可兑换商品清单 | `spuId`、`spuName`、`point`、`upTime`、`downTime`、`status`、`catName` |
-| `mall-product-detail` | 取 SKU 列表与 `shopId`（兑换前置） | `skuId`、`spuCategory`、`shopId` |
+| `mall-product-detail` | 取 SKU 列表 | `skuId`、`spuCategory` |
 | `query-my-prizes` | 抽奖后续：查看已中奖品与有效期 | `prizes[]`、`statusText`、`timeRemindText` |
 
 ### 写入类（需用户明确确认后调用）
 
 | Tool | 触发条件 | 关键约束 |
 |---|---|---|
-| `draw-lottery` | 用户确认用积分抽奖止损 | 必须先展示 `drawDecision.nextConsumption` 并获明确确认；有频次限制 |
-| `mall-create-order` | 用户确认兑换商品 | 必须先取 `skuId`/`spuCategory`；`shopId` 必须为 `2`；多件商品串行分别下单 |
+| `draw-lottery` | 用户确认用积分抽奖止损 | 必须先展示 `drawDecision.nextConsumption` 并获明确确认 |
+| `mall-create-order` | 用户确认兑换商品 | 必须先取 `skuId` |
 
 ## 调用流程
 
@@ -86,13 +86,6 @@
 - **兑换方案**：在售商品中，选 `point ≥ 本月将过期积分` 且可负担的最小积分商品
 
 工具在这两个方案里挑消耗更小的那个，而不是挑更贵的商品。
-
-### 4. 严格遵守 MCP 的抽奖语义
-
-`query-lottery-info` 的 `drawDecision` 是服务端计算的资源决策结果。抽奖资格**只以 `drawDecision.resourceEligible` 为准**：
-
-- 混合规则下 `availableTimes = 0` 且 `nextConsumption.type = "POINTS"` 时，仍可继续用积分抽奖
-- 因此本项目**不**依据 `availableTimes` 或 `drawTypeText` 自行推断，避免误判"不能抽"
 
 ## 真实性说明
 
