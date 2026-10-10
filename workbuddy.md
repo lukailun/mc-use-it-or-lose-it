@@ -1,6 +1,6 @@
 # WorkBuddy 开发对话上下文
 
-本文件记录 `Mc-Use-It-or-Lose-It`（麦麦积分末班车）在腾讯 WorkBuddy 中的完整开发过程，用于核验本作品真实使用了 WorkBuddy 智能体完成创意构思、开发与调试。
+本文件记录 `mc-use-it-or-lose-it`（麦麦积分末班车）在腾讯 WorkBuddy 中的完整开发过程，用于核验本作品真实使用了 WorkBuddy 智能体完成创意构思、开发与调试。
 
 - 开发工具：腾讯 WorkBuddy（Agent 模式）
 - 开发日期：2026-10-10
@@ -64,7 +64,7 @@ WorkBuddy 在 Agent 模式下完成：
 ## 5. 产出物
 
 ```
-Mc-Use-It-or-Lose-It/
+mc-use-it-or-lose-it/
 ├── SKILL.md                  # Skill 定义
 ├── README.md                 # 项目说明
 ├── MCP_INTEGRATION.md        # MCP 集成说明

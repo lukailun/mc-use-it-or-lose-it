@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""麦当劳积分止损方案计算器 —— Mc-Use-It-or-Lose-It（麦麦积分末班车）.
+"""麦当劳积分止损方案计算器 —— mc-use-it-or-lose-it（麦麦积分末班车）.
 
 输入 mcd-mcp 四个只读工具的原始返回，输出「本月将过期积分」的止损方案对比。
 

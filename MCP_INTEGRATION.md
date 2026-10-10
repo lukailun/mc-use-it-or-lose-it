@@ -1,6 +1,6 @@
 # MCP 集成说明
 
-本文件说明 `Mc-Use-It-or-Lose-It` 实际调用的麦当劳 MCP Server、Tool、调用流程与业务价值。
+本文件说明 `mc-use-it-or-lose-it` 实际调用的麦当劳 MCP Server、Tool、调用流程与业务价值。
 
 ## MCP Server
 

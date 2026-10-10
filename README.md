@@ -1,4 +1,4 @@
-# 麦麦积分末班车 · Mc-Use-It-or-Lose-It
+# 麦麦积分末班车 · mc-use-it-or-lose-it
 
 > 麦当劳积分有固定有效期，到期未用即自动失效扣除。这个 Skill 只做一件事：**计算当月即将失效的积分，帮你进行抽奖或者兑换操作。**
 
@@ -90,7 +90,7 @@ cp -r skills/mc-use-it-or-lose-it ~/.workbuddy/skills/
 ## 项目结构
 
 ```
-Mc-Use-It-or-Lose-It/
+mc-use-it-or-lose-it/
 ├── SKILL.md                      # Skill 定义：工作流、决策规则、安全边界
 ├── README.md                     # 本文件
 ├── MCP_INTEGRATION.md            # MCP 工具调用说明与业务价值
