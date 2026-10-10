@@ -69,6 +69,11 @@ def fmt_points(value):
     return f"{value:.2f}".rstrip("0").rstrip(".")
 
 
+def fmt_money(value):
+    """支付金额展示：整数不显示 .0，前置 ¥。"""
+    return f"¥{fmt_points(value)}"
+
+
 def is_on_shelf(product, now):
     """判断商品是否在当前时段可兑换。
 
@@ -180,6 +185,7 @@ def build_plan(payload):
             "spuId": product.get("spuId"),
             "spuName": product.get("spuName"),
             "point": point,
+            "price": to_float(product.get("price")),
             "catName": product.get("catName"),
             "shopId": product.get("shopId"),
             "downTime": product.get("downTime"),
@@ -189,6 +195,7 @@ def build_plan(payload):
         item["statusText"] = reason if not ok else STATUS_TEXT.get(int(to_float(product.get("status"), 0)), "未知")
         (on_shelf if ok else skipped).append(item)
 
+    # 展示按积分升序排序
     on_shelf.sort(key=lambda x: x["point"])
     result["redeem"] = on_shelf
 
@@ -225,7 +232,7 @@ def build_plan(payload):
                 "label": f"兑换《{cheapest_cover['spuName']}》",
                 "burn": cheapest_cover["point"],
                 "remaining": available - cheapest_cover["point"],
-                "note": f"spuId={cheapest_cover['spuId']}，有效期至 {cheapest_cover['downTime']}",
+                "note": f"spuId={cheapest_cover['spuId']}，支付 {fmt_money(cheapest_cover['price'])}，有效期至 {cheapest_cover['downTime']}",
             }
         )
 
@@ -305,7 +312,7 @@ def render_text(plan):
         flag = "可兑" if item["affordable"] else f"差 {fmt_points(item['point'] - acc['availablePoint'])} 分"
         lines.append(
             f"  [{flag}] {item['spuName']}｜{fmt_points(item['point'])} 分｜"
-            f"截止 {item['downTime']}｜spuId={item['spuId']}"
+            f"支付 {fmt_money(item['price'])}｜截止 {item['downTime']}｜spuId={item['spuId']}"
         )
     if len(plan["redeem"]) > 10:
         lines.append(f"  ...另有 {len(plan['redeem']) - 10} 个")
