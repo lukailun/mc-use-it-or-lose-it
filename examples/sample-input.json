@@ -1,0 +1,218 @@
+{
+  "now": "2026-10-10 11:12:21",
+  "account": {
+    "availablePoint": "1572.5",
+    "accumulativePoint": "12093.8",
+    "currency": "麦享会积分",
+    "currentMouthExpirePoint": "9.9",
+    "expiredPoint": "4944.3",
+    "frozenPoint": "0",
+    "lastMouthExpirePoint": "0",
+    "nextMouthExpirePoint": "0",
+    "usedPoint": "5577"
+  },
+  "lottery": {
+    "status": { "code": "SUCCESS", "message": "成功" },
+    "activityCode": "269t",
+    "activityStatusText": "进行中",
+    "activityName": "周六麦金喜抽奖",
+    "beginTime": "2025-09-06 00:00:00",
+    "endTime": "2030-12-31 23:59:59",
+    "drawPoint": "24",
+    "drawTypeText": "消耗积分抽奖",
+    "availablePoint": "1572.5",
+    "drawDecision": {
+      "resourceEligible": true,
+      "reason": null,
+      "nextConsumption": { "type": "POINTS", "points": "24", "chances": 0, "text": "本次将消耗 24 积分" },
+      "fallbackConsumption": null
+    },
+    "prizes": [
+      { "name": "积分霸王餐", "typeText": "优惠券" },
+      { "name": "麦金卡7天", "typeText": "会员卡" },
+      { "name": "早餐卡7天", "typeText": "权益卡" },
+      { "name": "下单立减3元券", "typeText": "优惠券" },
+      { "name": "10会员积分", "typeText": "积分奖" },
+      { "name": "28会员积分", "typeText": "积分奖" }
+    ]
+  },
+  "products": [
+    {
+      "spuName": "为随心配五大巨星“应援”1积分兑换活动",
+      "spuId": 14931,
+      "point": "1",
+      "selling": "为随心配五大巨星“应援”！“鱼酷玉咖牛”，只要13.9起～",
+      "upTime": "2026-01-09 10:44:59",
+      "downTime": "2026-01-10 17:00:00",
+      "shopId": 2,
+      "catName": "到店专用",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "18.8元2份麦辣鸡翅",
+      "spuId": 6113,
+      "point": "200",
+      "upTime": "2024-12-31 11:45:03",
+      "downTime": "2026-03-21 23:59:59",
+      "shopId": 2,
+      "catName": "到店专用",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "21.9元巨无霸可乐组合",
+      "spuId": 17081,
+      "point": "800",
+      "upTime": "2026-06-25 00:00:03",
+      "downTime": "2026-12-30 23:59:59",
+      "shopId": 2,
+      "catName": "到店专用",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "10.9元指定小食任选",
+      "spuId": 17077,
+      "point": "200",
+      "upTime": "2026-06-25 00:00:03",
+      "downTime": "2026-12-30 23:59:59",
+      "shopId": 2,
+      "catName": "到店专用",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "16.9元麦辣可乐组合",
+      "spuId": 17079,
+      "point": "500",
+      "upTime": "2026-06-25 00:00:03",
+      "downTime": "2026-12-30 23:59:59",
+      "shopId": 2,
+      "catName": "到店专用",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "18.8元板烧鸡腿堡两件套",
+      "spuId": 6111,
+      "point": "100",
+      "upTime": "2024-12-31 11:45:00",
+      "downTime": "2026-03-21 23:59:59",
+      "shopId": 2,
+      "catName": "到店专用",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "5.9元香芋派/菠萝派任选",
+      "spuId": 15866,
+      "point": "50",
+      "upTime": "2026-03-22 00:00:00",
+      "downTime": "2026-06-24 23:59:59",
+      "shopId": 2,
+      "catName": "到店专用",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "罗技键鼠套装",
+      "spuId": 17694,
+      "point": "6666",
+      "upTime": "2026-08-21 14:00:00",
+      "downTime": "2026-08-21 23:59:59",
+      "shopId": 2,
+      "catName": "玩具",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "6.9元可乐麦炫酷",
+      "spuId": 17073,
+      "point": "50",
+      "upTime": "2026-06-25 00:00:03",
+      "downTime": "2026-12-30 23:59:59",
+      "shopId": 2,
+      "catName": "到店专用",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "6.9元香芋派/菠萝派任选",
+      "spuId": 17074,
+      "point": "50",
+      "upTime": "2026-06-25 00:00:00",
+      "downTime": "2026-12-30 23:59:59",
+      "shopId": 2,
+      "catName": "到店专用",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "10.9元指定小食任选",
+      "spuId": 17076,
+      "point": "100",
+      "upTime": "2026-06-25 00:00:00",
+      "downTime": "2026-12-30 23:59:59",
+      "shopId": 2,
+      "catName": "到店专用",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "17.9元板烧可乐组合",
+      "spuId": 17080,
+      "point": "500",
+      "upTime": "2026-06-25 00:00:00",
+      "downTime": "2026-12-30 23:59:59",
+      "shopId": 2,
+      "catName": "到店专用",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "28.8元巨无霸四件套",
+      "spuId": 5246,
+      "point": "800",
+      "upTime": "2024-03-26 00:00:00",
+      "downTime": "2026-03-21 23:59:59",
+      "shopId": 2,
+      "catName": "到店专用",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "Nike Book 2 麦当劳特别联名款",
+      "spuId": 16800,
+      "point": "8888",
+      "upTime": "2026-06-05 14:00:00",
+      "downTime": "2026-06-05 16:00:00",
+      "shopId": 2,
+      "catName": "鞋袜",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "3.9元圆筒冰淇淋",
+      "spuId": 17075,
+      "point": "100",
+      "upTime": "2026-06-25 00:00:03",
+      "downTime": "2026-12-30 23:59:59",
+      "shopId": 2,
+      "catName": "到店专用",
+      "status": 2,
+      "price": "0"
+    },
+    {
+      "spuName": "16.9元2份麦辣鸡翅",
+      "spuId": 17078,
+      "point": "200",
+      "upTime": "2026-06-25 00:00:00",
+      "downTime": "2026-12-30 23:59:59",
+      "shopId": 2,
+      "catName": "到店专用",
+      "status": 2,
+      "price": "0"
+    }
+  ]
+}
