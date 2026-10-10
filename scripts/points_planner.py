@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""麦享会积分止损方案计算器 —— Mc-Use-It-or-Lose-It（麦麦积分末班车）.
+"""麦当劳积分止损方案计算器 —— Mc-Use-It-or-Lose-It（麦麦积分末班车）.
 
 输入 mcd-mcp 四个只读工具的原始返回，输出「本月将过期积分」的止损方案对比。
 
@@ -317,7 +317,7 @@ def render_text(plan):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="麦享会积分止损方案计算器")
+    parser = argparse.ArgumentParser(description="麦当劳积分止损方案计算器")
     parser.add_argument("--input", "-i", help="输入 JSON 文件路径，默认从 stdin 读取")
     parser.add_argument("--format", "-f", choices=("text", "json"), default="text")
     args = parser.parse_args()
